@@ -1,4 +1,14 @@
 <?php
+// ในหน้า admin.php
+session_start();
+
+// ตรวจสอบว่าผู้ใช้ล็อกอินหรือไม่ หากไม่ล็อกอินให้เด้งกลับไปยังหน้า login
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header('Location: ../login.php');
+    exit;
+}
+?>
+<?php
     require_once('connect.php');
 
     if(isset($_REQUEST['delete_id'])){
@@ -33,7 +43,7 @@
 
     <div class="container text-center">
         <h1>Admin page</h1>
-        <a href="../index.php" class="btn btn-primary float-right">Logout</a>
+        <a href="../logout.php" class="btn btn-primary float-right">Logout</a>
         <a href="add.php" class="btn btn-success">Add</a>
 
         <table class="table table-striped table-bordered table-hover">

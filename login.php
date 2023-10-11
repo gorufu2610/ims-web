@@ -78,20 +78,22 @@ $result = mysqli_query($con, $query);
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="mb-4">เข้าสู่ระบบ</h1>
-        <form method="post" action="">
-            <div class="form-group">
-                <label for="username">ชื่อผู้ใช้:</label>
-                <input type="text" class="form-control" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">รหัสผ่าน:</label>
-                <input type="password" class="form-control" id="password" name="password" required>
-            </div>
-            <button type="submit" name="login" class="btn btn-primary btn-block">เข้าสู่ระบบ</button>
-        </form>
-    </div>
+
+<div class="container">
+    <h1 class="mb-4">เข้าสู่ระบบ</h1>
+    <form method="post" action="">
+        <div class="form-group">
+            <label for="username">ชื่อผู้ใช้:</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">รหัสผ่าน:</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+        <button type="submit" name="login" class="btn btn-primary btn-block">เข้าสู่ระบบ</button>
+    </form>
+    <p class="mt-3"><a href="index.php">ย้อนกลับไปยังหน้าหลัก</a></p>
+</div>
 
     
 </body>
